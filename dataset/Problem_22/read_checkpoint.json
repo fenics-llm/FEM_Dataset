@@ -1,0 +1,18 @@
+{
+  "format": "FEniCS XDMFFile.write_checkpoint",
+  "time": 0.0,
+  "fields": [
+    {
+      "symbol": "u_sol",
+      "checkpoint_name": "u",
+      "meaning": "velocity field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u', -1)"
+    },
+    {
+      "symbol": "p_sol",
+      "checkpoint_name": "p",
+      "meaning": "pressure field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'p', -1)"
+    }
+  ]
+}

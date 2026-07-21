@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u">
+      <Grid Name="u_0" GridType="Uniform">
+        <Topology NumberOfElements="23040" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="23040 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="11785 2" Format="HDF">read_checkpoint.h5:u/u_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="276480 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/cell_dofs</DataItem>
+          <DataItem Dimensions="93218 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u/u_0/vector</DataItem>
+          <DataItem Dimensions="23041 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="23040 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p">
+      <Grid Name="p_0" GridType="Uniform">
+        <Topology NumberOfElements="23040" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="23040 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p/p_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="11785 2" Format="HDF">read_checkpoint.h5:p/p_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="69120 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p/p_0/cell_dofs</DataItem>
+          <DataItem Dimensions="11785 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p/p_0/vector</DataItem>
+          <DataItem Dimensions="23041 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p/p_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="23040 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p/p_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="mu_eff">
+      <Grid Name="mu_eff_0" GridType="Uniform">
+        <Topology NumberOfElements="23040" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="23040 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:mu_eff/mu_eff_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="11785 2" Format="HDF">read_checkpoint.h5:mu_eff/mu_eff_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="mu_eff" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="69120 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:mu_eff/mu_eff_0/cell_dofs</DataItem>
+          <DataItem Dimensions="11785 1" NumberType="Float" Format="HDF">read_checkpoint.h5:mu_eff/mu_eff_0/vector</DataItem>
+          <DataItem Dimensions="23041 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:mu_eff/mu_eff_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="23040 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:mu_eff/mu_eff_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

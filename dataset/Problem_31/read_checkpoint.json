@@ -1,0 +1,39 @@
+{
+  "format": "FEniCS XDMFFile.write_checkpoint",
+  "times": [
+    0.0,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "fields": [
+    {
+      "symbol": "u_init/u_sol",
+      "checkpoint_name": "u_t0_00",
+      "time": 0.0,
+      "meaning": "velocity field at t = 0.0",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_t0_00', -1)"
+    },
+    {
+      "symbol": "u_sol",
+      "checkpoint_name": "u_t0_25",
+      "time": 0.25,
+      "meaning": "velocity field at t = 0.25",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_t0_25', -1)"
+    },
+    {
+      "symbol": "u_sol",
+      "checkpoint_name": "u_t0_50",
+      "time": 0.5,
+      "meaning": "velocity field at t = 0.5",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_t0_50', -1)"
+    },
+    {
+      "symbol": "u_sol",
+      "checkpoint_name": "u_t1_00",
+      "time": 1.0,
+      "meaning": "velocity field at t = 1.0",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_t1_00', -1)"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "checkpoint_file": "read_checkpoint.xdmf",
+  "solution_file": "solution.xdmf",
+  "mesh_file": "mesh.xdmf",
+  "time_index": -1,
+  "fields": [
+    {
+      "checkpoint_name": "u_S",
+      "source_symbol": "u_S_sol",
+      "meaning": "Stokes velocity field on the upper subdomain, zero-pinned outside Omega_S",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_S', -1)"
+    },
+    {
+      "checkpoint_name": "p_S",
+      "source_symbol": "p_S_sol",
+      "meaning": "Stokes pressure field on the upper subdomain, zero-pinned outside Omega_S",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'p_S', -1)"
+    },
+    {
+      "checkpoint_name": "p_D",
+      "source_symbol": "p_D_sol",
+      "meaning": "Darcy pressure field on the lower subdomain, zero-pinned outside Omega_D",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'p_D', -1)"
+    },
+    {
+      "checkpoint_name": "u_D",
+      "source_symbol": "u_D_sol",
+      "meaning": "Darcy velocity derived from u_D = -(k/mu) grad(p_D), zero outside Omega_D",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_D', -1)"
+    }
+  ]
+}

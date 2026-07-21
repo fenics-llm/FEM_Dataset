@@ -1,0 +1,40 @@
+Problem number,Classification,Difficulty,Review status,One line statement of the problem
+Problem_1,solid,Easy,Solution exists,"Plane-stress linear elasticity for displacement $u = (ux, uy)$ in $Omega$."
+Problem_2,solid,Easy,Solution exists,"Plane-stress linear elasticity for displacement $u = (ux, uy)$ in $Omega$."
+Problem_3,solid,Easy,Solution exists,"Plane-stress linear elasticity for displacement $u = (ux, uy)$ in $Omega$."
+Problem_4,solid,Easy,Solution exists,"Plane-stress linear elasticity for displacement $u = (ux, uy)$ in $Omega$."
+Problem_5,solid,Easy,Solution exists,"Plane-stress linear elasticity for displacement $u = (ux, uy)$ in $Omega$."
+Problem_6,solid,Easy,Solution exists,"Plane-stress linear elasticity for displacement $u = (ux, uy)$ in $Omega$."
+Problem_7,solid,Easy,Solution exists,"Small-strain, linear elasticity for displacement $u = (ux, uy)$ in $Omega$."
+Problem_8,solid,Medium,Solution exists,"Small-strain, linear elasticity for displacement $u = (ux, uy)$ in $Omega$."
+Problem_9,solid,Medium,Solution exists,"Solve the linear elasticity equation for displacement $u = (ux, uy)$ in $Omega$."
+Problem_10,solid,Medium,Solution exists,"Small-strain linear elasticity for displacement $u = (ux, uy)$ on $Omega$."
+Problem_11,solid,Medium,Solution exists,"Small-strain linear elasticity for displacement $u = (ux, uy)$ on $Omega$."
+Problem_12,solid,Medium,Solution exists,"The rectangular strip is modeled as large-deformation, isotropic incompressible neo-Hookean solid, where the unknown fields are displacement $u = (ux, uy)$ and hydrostatic pressure $p$."
+Problem_13,solid,Medium,Solution exists,"The rectangular strip is modeled as large-deformation, isotropic incompressible Neo-Hookean solid, where the unknown fields are displacement $u = (ux, uy)$ and hydrostatic pressure $p$."
+Problem_14,solid,Hard,Solution exists,"The rectangular strip is modeled as large-deformation, isotropic quasi-incompressible Neo-Hookean solid with unknown displacement $u = (ux, uy)$ and hydrostatic pressure $p$."
+Problem_15,solid,Hard,Solution exists,Finite-strain Saint-Venant-Kirchhoff elasticity.
+Problem_16,solid,Hard,Solution missing,Use small-strain von Mises elastoplasticity with associative flow and perfect plasticity.
+Problem_17,fluid,Easy,Solution exists,Steady incompressible Stokes flow in $Omega$.
+Problem_18,fluid,Easy,Solution exists,"Steady incompressible Stokes flow with body force for velocity $u = (ux, uy)$ and pressure $p$ in $Omega$."
+Problem_19,fluid,Easy,Solution exists,"Lid driven cavity flow for steady incompressible Stokes flow for velocity $u = (ux, uy)$ and pressure $p$ in $Omega$."
+Problem_20,fluid,Easy,Solution exists,"Steady incompressible Navier-Stokes for velocity $u = (ux, uy)$ and pressure $p$ in $Omega$."
+Problem_21,fluid,Easy,Solution exists,"Lid driven cavity flow for steady incompressible Navier-Stokes for velocity $u = (ux, uy)$ and pressure $p$ in $Omega$."
+Problem_22,fluid,Medium,Solution exists,"Steady, incompressible Navier-Stokes equations for velocity $u = (ux, uy)$ and pressure $p$ in $Omega$."
+Problem_23,fluid,Medium,Solution exists,"Steady incompressible Navier-Stokes for velocity $u = (ux, uy)$ and pressure $p$ in $Omega$."
+Problem_24,fluid,Easy,Solution exists,"Steady incompressible Navier-Stokes with body force for velocity $u = (ux, uy)$ and pressure $p$ in $Omega$."
+Problem_25,fluid,Medium,Solution exists,"Fluid flow in the domain is governed by steady incompressible Navier-Stokes equations with velocity $u = (ux, uy)$ and pressure $p$ in $Omega$."
+Problem_26,fluid,Medium,Solution exists,"Let $Omega = [0, 1] times [0, 1]$ m be a unit square cavity."
+Problem_27,fluid,Medium,Solution exists,"Steady, incompressible, non-Newtonian flow."
+Problem_28,fluid,Hard,Solution exists,"Steady incompressible Navier-Stokes for velocity $u = (ux, uy)$ and pressure $p$ in $Omega$, coupled to a steady advection-diffusion equation for temperature $T$: Momentum: $rho (u cdot nabla) u - nabla cdot [2 mu(T) varepsilon(u)] + nabla p = 0$, where $varepsilon(u) = (nabla u + (nabla u)^T)/2$."
+Problem_29,fluid,Medium,Solution exists,"Steady advection-diffusion for a scalar concentration $c$ in $Omega$ with a given velocity field $u(x,y) = (ux(y), 0)$, ; $ux(y) = Utextmax cdot [4 y (H - y) / H^2]."
+Problem_30,fluid,Hard,Solution missing,"Solve the incompressible, unsteady Navier-Stokes equations in $Omega$ using a Variational Multiscale (residual-based VMS) formulation with streamline-upwind, pressure-stabilizing Petrov-Galerkin, and grad-div stabilizations."
+Problem_31,fluid,Medium,Solution exists,"Solve the unsteady incompressible Navier-Stokes equations for velocity $U = (u, v)$ and pressure $p$ in the domain."
+Problem_32,multiphysics,Hard,Solution missing,"Solve the diffusion-reaction equation for concentration $c$ on a moving domain using an Arbitrary Lagrangian-Eulerian (ALE) description, with constant diffusivity $D$ and first-ord..."
+Problem_33,multiphysics,Hard,Solution exists,"Solve in $Omega$ the Allen-Cahn curvature-flow equation for the phase field $phi$, given by $partialphi/partial t = -M ( (1/varepsilon) W'(phi) - varepsilon nabla^2phi )$, where the double-well potential is $W(phi) = 0.25 (phi^2 - 1)^2$."
+Problem_34,multiphysics,Hard,Solution missing,"Solve the non-dimensional Cahn-Hilliard equations in mixed form for the concentration $c$ and chemical potential $mu$: $partial c/partial t = nabla cdot ( M(c) nabla mu )$, with $mu = 3alpha muc - nabla^2 c$ and $muc = (0.5/ theta) ln(c/(1 - c)) + 1 - 2c$."
+Problem_35,multiphysics,Hard,Solution exists,"In $OmegaS$, the flow is incompressible Stokes with a body force: $nabla cdot uS = 0$ and $-nabla cdot sigma(uS, pS) = b$, with $sigma = -pS I + 2 nu textsym(nabla uS)$."
+Problem_36,multiphysics,Hard,Solution missing,The fluid is incompressible and is solved in the moving domain using the Arbitrary Lagrangian Eulerian (ALE) form of the Navier-Stokes equations.
+Problem_37,multiphysics,Hard,Solution missing,The fluid is incompressible and is solved in the moving domain using the Arbitrary Lagrangian Eulerian form of the Navier-Stokes equations.
+Problem_38,multiphysics,Hard,Solution exists,"Solve a coupled, steady, incompressible flow problem for velocity $u = (ux, uy)$ and pressure $p$."
+Problem_39,multiphysics,Hard,Solution exists,This is a coupled problem solving for velocity and pressure in each subdomain.

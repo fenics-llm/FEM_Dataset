@@ -1,0 +1,12 @@
+{
+  "format": "FEniCS XDMFFile.write_checkpoint",
+  "time": 0.0,
+  "fields": [
+    {
+      "symbol": "c_h",
+      "checkpoint_name": "c",
+      "meaning": "concentration field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'c', -1)"
+    }
+  ]
+}

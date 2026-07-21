@@ -1,0 +1,20 @@
+{
+  "checkpoint_file": "read_checkpoint.xdmf",
+  "solution_file": "solution.xdmf",
+  "mesh_file": "mesh.xdmf",
+  "time_index": -1,
+  "fields": [
+    {
+      "checkpoint_name": "u",
+      "source_symbol": "u_sol",
+      "meaning": "combined velocity field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u', -1)"
+    },
+    {
+      "checkpoint_name": "p",
+      "source_symbol": "p_sol",
+      "meaning": "pressure field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'p', -1)"
+    }
+  ]
+}
