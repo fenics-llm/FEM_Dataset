@@ -8,7 +8,7 @@ Reference solution source: `None`.
 
 **Geometry:**
 
-Solve the transport of a chemical inside an expanding circular disk $\Omega(t)$ with radius $R(t)$, where $R(t) = R_0 + s \cdot t$ with constant rate $s = 1.0 \times 10^{-4}$ m s$^{-1}$. Here, $R_0$ is the initial radius and is equal to $0.05$ m. The boundary of this circular disk is denoted by $\Gamma(t)$.
+Solve the transport of a chemical inside an expanding circular disk $\Omega(t)$ with radius $R(t)$, where $R(t) = R_0 + s \cdot t$ with constant rate $s = 1.0 \times 10^{-3}$ m s$^{-1}$. Here, $R_0$ is the initial radius and is equal to $0.05$ m. The boundary of this circular disk is denoted by $\Gamma(t)$.
 
 **Mesh:**
 

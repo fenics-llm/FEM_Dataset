@@ -11,5 +11,13 @@ The mesh motion is given by $w(x,t) = s x / \|x\|$ for $x \neq (0,0)$, $w(x,t) =
 ## FEniCS Mesh Code
 
 ```python
-# Reference solution not available yet; add FEniCS mesh construction with solution.py.
+from dolfin import Point
+from mshr import Circle, generate_mesh
+
+mesh = generate_mesh(Circle(Point(0.0, 0.0), 0.05), 50)
 ```
+
+The solver advances the prescribed mesh motion at every time step with
+`ALE.move(mesh, displacement)`, where `displacement = s*dt*x/|x|` away from
+the centre and is zero at the centre.  With the resolution parameter 50, the
+initial mean element size is approximately `1e-3 m` across the disk diameter.

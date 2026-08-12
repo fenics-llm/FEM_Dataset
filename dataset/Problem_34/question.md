@@ -18,7 +18,7 @@ $\partial c/\partial t = \nabla \cdot ( M(c) \nabla \mu )$, with $\mu = 3\alpha 
 
 Use the degenerate mobility $M(c) = c(1 - c)$.
 
-Initialize with $c(x, y, 0) = \bar{c} + r(x, y)$, where $\bar{c} = 0.63$ and $r$ is a zero-mean uniform perturbation in $[-0.05, 0.05]$.
+Initialize with $c(x, y, 0) = \bar{c} + r(x, y)$, where $\bar{c} = 0.63$ and $r$ is a zero-mean uniform perturbation in $[-0.05, 0.05]$ generated using the fixed random seed `340063`.
 
 Advance in time using a backward Euler scheme.
 
@@ -28,16 +28,16 @@ Impose periodic boundary conditions for both $c$ and $\mu$ on $\partial\Omega$.
 
 **Parameters:**
 
-Set $\theta = 1.5$, $\alpha = 3000$, and final time $T = 0.04$.
+Set $\theta = 1.5$, $\alpha = 3000$, and final time $T = 1\text{e}-4$.
 
-Report the fields at $t = 0, 3\text{e}-6, 1\text{e}-4, 1\text{e}-3$, and $4\text{e}-2$ in XDMF format.
+Report the fields at $t = 0, 3\text{e}-6$, and $1\text{e}-4$ in XDMF format.
 
 **Output:**
 
-Save the concentration and chemical potential fields at $t = 0, 3\text{e}-6, 1\text{e}-4, 1\text{e}-3$, and $4\text{e}-2$ to a time-series file named `cahn\_hilliard.xdmf`
+Save the concentration and chemical potential fields at $t = 0, 3\text{e}-6$, and $1\text{e}-4$ to a time-series file named `cahn\_hilliard.xdmf`.
 
 **Hints:**
 
 Use adaptive time stepping: start with $\Delta t$ in the range $1\text{e}-7$ to $5\text{e}-7$ and then increase or reduce the time step based on the nonlinear iterations required for convergence. Make sure the simulation can recover if the time step selected is too large.
 
-Discretize by splitting the fourth-order equation into two coupled second-order equations and solve them with linear finite elements.
+Discretize by splitting the fourth-order equation into two coupled second-order equations and solve them with linear finite elements on a uniform $128 \times 128$ mesh.

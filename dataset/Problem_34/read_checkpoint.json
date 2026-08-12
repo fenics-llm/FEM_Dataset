@@ -1,0 +1,32 @@
+{
+  "format": "FEniCS XDMFFile.write_checkpoint",
+  "time": 0.0001,
+  "fields": [
+    {
+      "symbol": "c_final",
+      "checkpoint_name": "c",
+      "time": 0.0001,
+      "meaning": "concentration at the configured final time"
+    },
+    {
+      "symbol": "mu_final",
+      "checkpoint_name": "mu",
+      "time": 0.0001,
+      "meaning": "chemical potential at the configured final time"
+    }
+  ],
+  "normal_outputs": [
+    {
+      "file": "cahn_hilliard.xdmf",
+      "time": 0.0
+    },
+    {
+      "file": "cahn_hilliard.xdmf",
+      "time": 3e-06
+    },
+    {
+      "file": "cahn_hilliard.xdmf",
+      "time": 0.0001
+    }
+  ]
+}

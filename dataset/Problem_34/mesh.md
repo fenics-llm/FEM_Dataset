@@ -9,5 +9,7 @@ No explicit mesh section is present in the benchmark statement.
 ## FEniCS Mesh Code
 
 ```python
-# Reference solution not available yet; add FEniCS mesh construction with solution.py.
+# Linear-element reference candidate selected to resolve the alpha=3000
+# diffuse transition more clearly than the paper's quadratic 64-by-64 case.
+mesh = UnitSquareMesh(128, 128)
 ```
