@@ -117,15 +117,9 @@ F = F_mom + F_cont + F_en
 # --------------------------------------------------------------
 # 8. Non-linear solve (Newton)
 # --------------------------------------------------------------
-solver = NewtonSolver()
-solver.parameters["relative_tolerance"] = 1e-6
-solver.parameters["absolute_tolerance"] = 1e-8
-solver.parameters["maximum_iterations"] = 30
-solver.parameters["linear_solver"] = "mumps"
-
 solve(F == 0, w, bcs, J=derivative(F, w, TrialFunction(W)),
       solver_parameters={"newton_solver": {
-          "relative_tolerance": 1e-6,
+          "relative_tolerance": 1e-12,
           "absolute_tolerance": 1e-8,
           "maximum_iterations": 30,
           "linear_solver": "mumps"}})
