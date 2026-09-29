@@ -1,0 +1,22 @@
+{
+  "format": "FEniCS XDMFFile.write_checkpoint",
+  "time": 0.0,
+  "fields": [
+    {
+      "symbol": "u_h",
+      "checkpoint_name": "u",
+      "meaning": "mean-zero scalar field",
+      "element_family": "Lagrange",
+      "element_degree": 1,
+      "value_shape": []
+    },
+    {
+      "symbol": "c_h",
+      "checkpoint_name": "c",
+      "meaning": "spatially constant compatibility multiplier",
+      "element_family": "Discontinuous Lagrange",
+      "element_degree": 0,
+      "value_shape": []
+    }
+  ]
+}

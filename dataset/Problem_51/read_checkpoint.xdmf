@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="w">
+      <Grid Name="w_0" GridType="Uniform">
+        <Topology NumberOfElements="2500" TopologyType="Quadrilateral" NodesPerElement="4">
+          <DataItem Dimensions="2500 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:w/w_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="2601 2" Format="HDF">read_checkpoint.h5:w/w_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="Q" ElementDegree="1" ElementCell="quadrilateral" Name="w" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="10000 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:w/w_0/cell_dofs</DataItem>
+          <DataItem Dimensions="2601 1" NumberType="Float" Format="HDF">read_checkpoint.h5:w/w_0/vector</DataItem>
+          <DataItem Dimensions="2501 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:w/w_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="2500 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:w/w_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="theta">
+      <Grid Name="theta_0" GridType="Uniform">
+        <Topology NumberOfElements="2500" TopologyType="Quadrilateral" NodesPerElement="4">
+          <DataItem Dimensions="2500 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:theta/theta_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="2601 2" Format="HDF">read_checkpoint.h5:theta/theta_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="Q" ElementDegree="1" ElementCell="quadrilateral" Name="theta" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="20000 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:theta/theta_0/cell_dofs</DataItem>
+          <DataItem Dimensions="5202 1" NumberType="Float" Format="HDF">read_checkpoint.h5:theta/theta_0/vector</DataItem>
+          <DataItem Dimensions="2501 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:theta/theta_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="2500 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:theta/theta_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

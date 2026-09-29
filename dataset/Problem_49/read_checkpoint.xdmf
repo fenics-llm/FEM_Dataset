@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="phi_1">
+      <Grid Name="phi_1_0" GridType="Uniform">
+        <Topology NumberOfElements="7650" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="7650 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_1/phi_1_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="1872 3" Format="HDF">read_checkpoint.h5:phi_1/phi_1_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="tetrahedron" Name="phi_1" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="229500 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_1/phi_1_0/cell_dofs</DataItem>
+          <DataItem Dimensions="37389 1" NumberType="Float" Format="HDF">read_checkpoint.h5:phi_1/phi_1_0/vector</DataItem>
+          <DataItem Dimensions="7651 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_1/phi_1_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="7650 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_1/phi_1_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="phi_2">
+      <Grid Name="phi_2_0" GridType="Uniform">
+        <Topology NumberOfElements="7650" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="7650 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_2/phi_2_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="1872 3" Format="HDF">read_checkpoint.h5:phi_2/phi_2_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="tetrahedron" Name="phi_2" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="229500 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_2/phi_2_0/cell_dofs</DataItem>
+          <DataItem Dimensions="37389 1" NumberType="Float" Format="HDF">read_checkpoint.h5:phi_2/phi_2_0/vector</DataItem>
+          <DataItem Dimensions="7651 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_2/phi_2_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="7650 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_2/phi_2_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="phi_3">
+      <Grid Name="phi_3_0" GridType="Uniform">
+        <Topology NumberOfElements="7650" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="7650 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_3/phi_3_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="1872 3" Format="HDF">read_checkpoint.h5:phi_3/phi_3_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="tetrahedron" Name="phi_3" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="229500 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_3/phi_3_0/cell_dofs</DataItem>
+          <DataItem Dimensions="37389 1" NumberType="Float" Format="HDF">read_checkpoint.h5:phi_3/phi_3_0/vector</DataItem>
+          <DataItem Dimensions="7651 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_3/phi_3_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="7650 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:phi_3/phi_3_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

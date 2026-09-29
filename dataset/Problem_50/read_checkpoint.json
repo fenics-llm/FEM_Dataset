@@ -1,0 +1,13 @@
+{
+  "field_name": "u",
+  "family": "CG",
+  "degree": 1,
+  "value_shape": [
+    3
+  ],
+  "checkpoint_index": 0,
+  "contact_force_fe": 0.032061940759242645,
+  "contact_force_hertz": 0.029304029304029304,
+  "maximum_pressure_fe": 1.427638171098528,
+  "maximum_pressure_hertz": 1.399164334873805
+}

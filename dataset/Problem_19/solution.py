@@ -27,22 +27,23 @@ W  = FunctionSpace(mesh, MixedElement([Ve, Pe]))
 
 # ------------------------------------------------------------
 # 3. Boundary conditions
-#    Lid (top): u = (1, 0)
-#    Other walls: u = (0, 0)
+#    Lid interior (top, excluding corners): u = (1, 0)
+#    Other walls, including both upper corners: u = (0, 0)
 #    Pressure: fix nullspace by pinning p = 0 at one point
 # ------------------------------------------------------------
 tol = 1e-14
 
 class Lid(SubDomain):
     def inside(self, x, on_boundary):
-        return on_boundary and near(x[1], 1.0, tol)
+        return (near(x[1], 1.0, tol)
+                and x[0] > tol
+                and x[0] < 1.0 - tol)
 
 class Walls(SubDomain):
     def inside(self, x, on_boundary):
-        # left OR right OR bottom, but explicitly NOT the top (avoids corner conflict)
-        return (on_boundary
-                and (near(x[0], 0.0, tol) or near(x[0], 1.0, tol) or near(x[1], 0.0, tol))
-                and (not near(x[1], 1.0, tol)))
+        return (near(x[0], 0.0, tol)
+                or near(x[0], 1.0, tol)
+                or near(x[1], 0.0, tol))
 
 lid = Lid()
 walls = Walls()
@@ -50,8 +51,10 @@ walls = Walls()
 u_lid  = Constant((1.0, 0.0))
 u_wall = Constant((0.0, 0.0))
 
-bc_u_lid   = DirichletBC(W.sub(0), u_lid,  lid)
-bc_u_walls = DirichletBC(W.sub(0), u_wall, walls)
+# Pointwise selection checks every P2 node, including corner-adjacent midpoints.
+# Its predicates use coordinates only: on_boundary is false for this method.
+bc_u_lid   = DirichletBC(W.sub(0), u_lid,  lid, method="pointwise")
+bc_u_walls = DirichletBC(W.sub(0), u_wall, walls, method="pointwise")
 
 # Pressure pinning at (0,0) to remove constant-nullspace in p
 class PinPoint(SubDomain):

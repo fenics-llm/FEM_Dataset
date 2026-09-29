@@ -1,0 +1,14 @@
+{
+  "format": "FEniCS XDMFFile.write_checkpoint",
+  "time": 0.0,
+  "fields": [
+    {
+      "symbol": "w_h",
+      "checkpoint_name": "deflection",
+      "meaning": "transverse membrane deflection",
+      "element_family": "Lagrange",
+      "element_degree": 1,
+      "value_shape": []
+    }
+  ]
+}

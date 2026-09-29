@@ -26,8 +26,14 @@ $v(x, y, 0) = -\cos(2\pi x) \sin(2\pi y)$
 
 **Parameters:**
 
-Set density $\rho = 1$ and kinematic viscosity $\nu = 1 \times 10^{-3}$. Simulate up to time $t = 1$. Choose a time step small enough to lead to a stable numerical solution considering the advection and viscous time scales.
+Set density $\rho = 1$ and kinematic viscosity $\nu = 1 \times 10^{-3}$. Simulate up to time $t = 1$.
+
+**Numerical formulation:**
+
+Use the supplied mesh and a periodic Taylor--Hood $[P_2]^2\times P_1$ space. Fix the pressure at $(0,0)$ to remove its constant nullspace. Advance with $\Delta t=0.0025$ using backward Euler, with convection linearized as $(U^n\cdot\nabla)U^{n+1}$.
+
+Every velocity field after $t=0$ must be obtained by assembling and solving this finite-element time-stepping problem through all intervening steps. Direct evaluation, interpolation, or projection of an analytical or manufactured velocity field at the requested output times is not permitted.
 
 **Numerical outputs:**
 
-Save the velocity field at times (e.g., $t = 0, 0.25, 0.5, 1.0$) in XDMF format.
+Save the velocity field at $t = 0$, $0.25$, $0.5$, and $1.0$ in `solution.xdmf` and `solution.h5`.

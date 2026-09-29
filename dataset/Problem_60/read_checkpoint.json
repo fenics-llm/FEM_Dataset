@@ -1,0 +1,14 @@
+{
+  "format": "FEniCS XDMFFile.write_checkpoint",
+  "time": 5.0,
+  "fields": [
+    {
+      "symbol": "u_h",
+      "checkpoint_name": "temperature",
+      "meaning": "temperature at t=5",
+      "element_family": "Lagrange",
+      "element_degree": 1,
+      "value_shape": []
+    }
+  ]
+}

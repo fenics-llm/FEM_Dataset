@@ -1,0 +1,44 @@
+{
+  "fields": [
+    {
+      "name": "phi_1",
+      "family": "CG",
+      "degree": 2,
+      "value_shape": [
+        3
+      ],
+      "mode": 1,
+      "critical_load_factor": 0.16820688682572624
+    },
+    {
+      "name": "phi_2",
+      "family": "CG",
+      "degree": 2,
+      "value_shape": [
+        3
+      ],
+      "mode": 2,
+      "critical_load_factor": 0.49690946431280714
+    },
+    {
+      "name": "phi_3",
+      "family": "CG",
+      "degree": 2,
+      "value_shape": [
+        3
+      ],
+      "mode": 3,
+      "critical_load_factor": 0.9891797797658428
+    }
+  ],
+  "critical_loads_fe": [
+    0.16820688682572624,
+    0.49690946431280714,
+    0.9891797797658428
+  ],
+  "critical_loads_beam": [
+    0.16825685873856808,
+    0.49404861139439377,
+    0.9908381098045472
+  ]
+}

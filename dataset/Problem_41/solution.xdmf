@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="3.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid Name="TimeSeries" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="mesh" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">solution.h5:/Mesh/0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">solution.h5:/Mesh/0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.2409290981679684" />
+        <Attribute Name="u" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="20705 3" Format="HDF">solution.h5:/VisualisationVector/0</DataItem>
+        </Attribute>
+        <Attribute Name="p" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="20705 1" Format="HDF">solution.h5:/VisualisationVector/1</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="mesh" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">solution.h5:/Mesh/2/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">solution.h5:/Mesh/2/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.2448560889849556" />
+        <Attribute Name="u" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="20705 3" Format="HDF">solution.h5:/VisualisationVector/2</DataItem>
+        </Attribute>
+        <Attribute Name="p" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="20705 1" Format="HDF">solution.h5:/VisualisationVector/3</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="mesh" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">solution.h5:/Mesh/4/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">solution.h5:/Mesh/4/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.2487830798019428" />
+        <Attribute Name="u" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="20705 3" Format="HDF">solution.h5:/VisualisationVector/4</DataItem>
+        </Attribute>
+        <Attribute Name="p" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="20705 1" Format="HDF">solution.h5:/VisualisationVector/5</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="mesh" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">solution.h5:/Mesh/6/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">solution.h5:/Mesh/6/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.25271007061893" />
+        <Attribute Name="u" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="20705 3" Format="HDF">solution.h5:/VisualisationVector/6</DataItem>
+        </Attribute>
+        <Attribute Name="p" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="20705 1" Format="HDF">solution.h5:/VisualisationVector/7</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="mesh" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">solution.h5:/Mesh/8/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">solution.h5:/Mesh/8/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.2566370614359172" />
+        <Attribute Name="u" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="20705 3" Format="HDF">solution.h5:/VisualisationVector/8</DataItem>
+        </Attribute>
+        <Attribute Name="p" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="20705 1" Format="HDF">solution.h5:/VisualisationVector/9</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

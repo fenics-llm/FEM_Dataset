@@ -1,6 +1,7 @@
 {
   "format": "FEniCS XDMFFile.write_checkpoint",
   "checkpoint_policy": "Only the final concentration at t = 10.0 s is stored.",
+  "mesh_policy": "mesh.xdmf stores the initial radius-0.05 ALE mesh; the final radius-0.06 geometry is embedded in the solution and checkpoint files.",
   "time": 10.0,
   "fields": [
     {

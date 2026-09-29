@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="deflection">
+      <Grid Name="deflection_0" GridType="Uniform">
+        <Topology NumberOfElements="6451" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="6451 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:deflection/deflection_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="3317 2" Format="HDF">read_checkpoint.h5:deflection/deflection_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="deflection" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="19353 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:deflection/deflection_0/cell_dofs</DataItem>
+          <DataItem Dimensions="3317 1" NumberType="Float" Format="HDF">read_checkpoint.h5:deflection/deflection_0/vector</DataItem>
+          <DataItem Dimensions="6452 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:deflection/deflection_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="6451 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:deflection/deflection_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

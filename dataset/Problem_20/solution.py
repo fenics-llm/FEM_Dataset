@@ -53,11 +53,8 @@ bcs = [
 ]
 # No Dirichlet at outlet (do-nothing traction-free is natural)
 
-# --- Fix pressure at one point for uniqueness: p(0,0) = 0 ---
-class PPoint(SubDomain):
-    def inside(self, x, on_boundary):
-        return near(x[0], 0.0, tol) and near(x[1], 0.0, tol)
-bcs.append(DirichletBC(W.sub(1), Constant(0.0), PPoint(), method="pointwise"))
+# The prescribed outlet traction fixes the pressure level, so no pressure
+# pin or mean-zero constraint is required.
 
 # --- Unknowns, tests ---
 w  = Function(W)               # current iterate (u, p)

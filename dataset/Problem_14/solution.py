@@ -1,4 +1,6 @@
-# Copied from Results_ALL-FEM-main/reference solutions/solid/14/q14_neo_hookean.py for dataset Problem_14.
+# Adapted from Results_ALL-FEM-main/reference solutions/solid/14/q14_neo_hookean.py for dataset Problem_14.
+# The hole-pressure contribution uses internal virtual work minus the applied
+# traction work, correcting the sign in the imported reference script.
 # Original benchmark: Solid Mechanics Problem 14 (Hard).
 
 # filename: q14_neo_hookean.py
@@ -86,13 +88,15 @@ P = -p*J*inv(F).T + mu*F
 P_hole = 0.10e6                # Pa
 n0 = FacetNormal(mesh)        # reference outward normal
 
-# Traction vector (follower pressure)
+# Applied first-Piola traction for internal follower pressure.  On a hole,
+# n0 points from the solid into the cavity, so the physical pressure traction
+# on the solid is -P_hole*J*F^{-T}*n0.
 traction = -P_hole * J * inv(F).T * n0
 
-# Weak form
+# Weak form: internal virtual work minus applied external virtual work.
 R = inner(P, grad(v))*dx + q*(J - 1.0)*dx \
-    + dot(traction, v)*ds(5) \
-    + dot(traction, v)*ds(6)
+    - dot(traction, v)*ds(5) \
+    - dot(traction, v)*ds(6)
 
 # --------------------------------------------------------------
 # Boundary conditions
@@ -103,14 +107,9 @@ bc_left = DirichletBC(W.sub(0), Constant((0.0, 0.0)), boundaries, 1)
 # Right edge: prescribed displacement (+0.060,0)
 bc_right = DirichletBC(W.sub(0), Expression(("0.060","0.0"), degree=1), boundaries, 2)
 
-# Pressure gauge (fix p at a point to avoid nullspace)
-class PointGauge(SubDomain):
-    def inside(self, x, on):
-        return near(x[0], 0.0, tol) and near(x[1], 0.0, tol)
-gauge = PointGauge()
-bc_pressure = DirichletBC(W.sub(1), Constant(0.0), gauge, method='pointwise')
-
-bcs = [bc_left, bc_right, bc_pressure]
+# The prescribed hole pressure and traction-free boundaries determine the
+# hydrostatic-pressure level; no artificial pointwise pressure pin is needed.
+bcs = [bc_left, bc_right]
 
 # --------------------------------------------------------------
 # Newton solver
@@ -119,7 +118,7 @@ J_form = derivative(R, w)
 problem = NonlinearVariationalProblem(R, w, bcs, J_form)
 solver  = NonlinearVariationalSolver(problem)
 prm = solver.parameters
-prm['newton_solver']['relative_tolerance'] = 1e-6
+prm['newton_solver']['relative_tolerance'] = 1e-12
 prm['newton_solver']['absolute_tolerance'] = 1e-8
 prm['newton_solver']['maximum_iterations'] = 25
 prm['newton_solver']['linear_solver'] = 'mumps'

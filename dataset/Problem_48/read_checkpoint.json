@@ -1,0 +1,20 @@
+{
+  "field_name": "u",
+  "family": "CG",
+  "degree": 1,
+  "value_shape": [],
+  "checkpoint_index": 0,
+  "auxiliary_field": "read_checkpoint.xdmf:T:CG1",
+  "canonical_fields": [
+    "T",
+    "u"
+  ],
+  "area": 9.40839999999997,
+  "centroid_z": 0.09085700863058531,
+  "inertia_y": 35.699464038999956,
+  "axial_stiffness": 195.79842825248662,
+  "bending_stiffness": 836.4615012423861,
+  "coupling_stiffness": 362.2797187819598,
+  "kappa_z": 0.19849117816044104,
+  "source_average": -9.338840502781318e-11
+}

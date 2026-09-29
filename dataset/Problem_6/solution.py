@@ -51,9 +51,10 @@ facets = MeshFunction("size_t", mesh, mesh.topology().dim() - 1, 0)
 
 class TopNoNotch(SubDomain):
     def inside(self, x, on_boundary):
-        if not on_boundary: return False
-        if not near(x[1], 0.20, tol): return False
-        return (x[0] < 0.45 - tol) or (x[0] > 0.55 + tol)
+        # The semicircular notch arc lies below y = 0.20.  Marking the
+        # straight top boundary by height includes the facets adjacent to the
+        # two line--arc junctions without applying traction to the arc.
+        return on_boundary and near(x[1], 0.20, tol)
 
 top_no_notch = TopNoNotch()
 top_no_notch.mark(facets, 1)

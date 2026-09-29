@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u">
+      <Grid Name="u_0" GridType="Uniform">
+        <Topology NumberOfElements="10" TopologyType="PolyLine" NodesPerElement="2">
+          <DataItem Dimensions="10 2" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="11 2" Format="HDF">read_checkpoint.h5:u/u_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="interval" Name="u" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="20 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/cell_dofs</DataItem>
+          <DataItem Dimensions="11 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u/u_0/vector</DataItem>
+          <DataItem Dimensions="11 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="10 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

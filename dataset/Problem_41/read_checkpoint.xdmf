@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_t79P">
+      <Grid Name="u_t79P_0" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P/u_t79P_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">read_checkpoint.h5:u_t79P/u_t79P_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.240929" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u_t79P" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="491520 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P/u_t79P_0/cell_dofs</DataItem>
+          <DataItem Dimensions="164738 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_t79P/u_t79P_0/vector</DataItem>
+          <DataItem Dimensions="40961 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P/u_t79P_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="40960 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P/u_t79P_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p_t79P">
+      <Grid Name="p_t79P_0" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P/p_t79P_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">read_checkpoint.h5:p_t79P/p_t79P_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.240929" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p_t79P" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="122880 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P/p_t79P_0/cell_dofs</DataItem>
+          <DataItem Dimensions="20705 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p_t79P/p_t79P_0/vector</DataItem>
+          <DataItem Dimensions="40961 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P/p_t79P_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="40960 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P/p_t79P_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_t79P_plus_1over4">
+      <Grid Name="u_t79P_plus_1over4_0" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over4/u_t79P_plus_1over4_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over4/u_t79P_plus_1over4_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.244856" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u_t79P_plus_1over4" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="491520 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over4/u_t79P_plus_1over4_0/cell_dofs</DataItem>
+          <DataItem Dimensions="164738 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over4/u_t79P_plus_1over4_0/vector</DataItem>
+          <DataItem Dimensions="40961 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over4/u_t79P_plus_1over4_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="40960 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over4/u_t79P_plus_1over4_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p_t79P_plus_1over4">
+      <Grid Name="p_t79P_plus_1over4_0" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over4/p_t79P_plus_1over4_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over4/p_t79P_plus_1over4_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.244856" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p_t79P_plus_1over4" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="122880 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over4/p_t79P_plus_1over4_0/cell_dofs</DataItem>
+          <DataItem Dimensions="20705 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over4/p_t79P_plus_1over4_0/vector</DataItem>
+          <DataItem Dimensions="40961 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over4/p_t79P_plus_1over4_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="40960 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over4/p_t79P_plus_1over4_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_t79P_plus_1over2">
+      <Grid Name="u_t79P_plus_1over2_0" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over2/u_t79P_plus_1over2_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over2/u_t79P_plus_1over2_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.248783" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u_t79P_plus_1over2" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="491520 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over2/u_t79P_plus_1over2_0/cell_dofs</DataItem>
+          <DataItem Dimensions="164738 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over2/u_t79P_plus_1over2_0/vector</DataItem>
+          <DataItem Dimensions="40961 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over2/u_t79P_plus_1over2_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="40960 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_1over2/u_t79P_plus_1over2_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p_t79P_plus_1over2">
+      <Grid Name="p_t79P_plus_1over2_0" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over2/p_t79P_plus_1over2_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over2/p_t79P_plus_1over2_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.248783" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p_t79P_plus_1over2" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="122880 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over2/p_t79P_plus_1over2_0/cell_dofs</DataItem>
+          <DataItem Dimensions="20705 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over2/p_t79P_plus_1over2_0/vector</DataItem>
+          <DataItem Dimensions="40961 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over2/p_t79P_plus_1over2_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="40960 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_1over2/p_t79P_plus_1over2_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_t79P_plus_3over4">
+      <Grid Name="u_t79P_plus_3over4_0" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_3over4/u_t79P_plus_3over4_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">read_checkpoint.h5:u_t79P_plus_3over4/u_t79P_plus_3over4_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.252710" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u_t79P_plus_3over4" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="491520 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_3over4/u_t79P_plus_3over4_0/cell_dofs</DataItem>
+          <DataItem Dimensions="164738 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_t79P_plus_3over4/u_t79P_plus_3over4_0/vector</DataItem>
+          <DataItem Dimensions="40961 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_3over4/u_t79P_plus_3over4_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="40960 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t79P_plus_3over4/u_t79P_plus_3over4_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p_t79P_plus_3over4">
+      <Grid Name="p_t79P_plus_3over4_0" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_3over4/p_t79P_plus_3over4_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">read_checkpoint.h5:p_t79P_plus_3over4/p_t79P_plus_3over4_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.252710" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p_t79P_plus_3over4" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="122880 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_3over4/p_t79P_plus_3over4_0/cell_dofs</DataItem>
+          <DataItem Dimensions="20705 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p_t79P_plus_3over4/p_t79P_plus_3over4_0/vector</DataItem>
+          <DataItem Dimensions="40961 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_3over4/p_t79P_plus_3over4_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="40960 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t79P_plus_3over4/p_t79P_plus_3over4_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_t80P">
+      <Grid Name="u_t80P_0" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t80P/u_t80P_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">read_checkpoint.h5:u_t80P/u_t80P_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.256637" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u_t80P" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="491520 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t80P/u_t80P_0/cell_dofs</DataItem>
+          <DataItem Dimensions="164738 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_t80P/u_t80P_0/vector</DataItem>
+          <DataItem Dimensions="40961 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t80P/u_t80P_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="40960 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t80P/u_t80P_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p_t80P">
+      <Grid Name="p_t80P_0" GridType="Uniform">
+        <Topology NumberOfElements="40960" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="40960 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t80P/p_t80P_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="20705 2" Format="HDF">read_checkpoint.h5:p_t80P/p_t80P_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="1.256637" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p_t80P" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="122880 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t80P/p_t80P_0/cell_dofs</DataItem>
+          <DataItem Dimensions="20705 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p_t80P/p_t80P_0/vector</DataItem>
+          <DataItem Dimensions="40961 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t80P/p_t80P_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="40960 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t80P/p_t80P_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

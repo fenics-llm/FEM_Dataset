@@ -1,33 +1,77 @@
 # Problem_30: Fluid Mechanics Problem 14 (Hard)
 
-Source: `main-v4.tex`, Benchmark Problems, label `fm_q14`.
+Source: Schäfer--Turek/DFG benchmark 2D-3 (Re = 100, fixed time interval).
 
-Original benchmark category: Fluid Q14.
-
-Reference solution source: `None`.
+Reference source: `DFG_2D-3_benchmark.html`.
 
 **Geometry:**
 
-Solve the turbulent flow over a cylinder in the square domain $\Omega = [-30 D, +30 D] \times [-30 D, +30 D]$. The circular cylinder of diameter $D$ is placed at $(0, 0)$.
+Consider the channel
+
+$$
+\Omega=([0,2.2]\times[0,0.41])\setminus\overline{B_{0.05}(0.2,0.2)},
+$$
+
+containing a circular cylinder of diameter $D=0.1$ centered at $(0.2,0.2)$. Use a conforming body-fitted mesh refined near the cylinder and in its wake.
 
 **Model:**
 
-Solve the incompressible, unsteady Navier-Stokes equations in $\Omega$ using a Variational Multiscale (residual-based VMS) formulation with streamline-upwind, pressure-stabilizing Petrov-Galerkin, and grad-div stabilizations.
+Solve the two-dimensional unsteady incompressible Navier--Stokes equations
 
-We use $u$ to denote the velocity and $p$ to denote the pressure.
+$$
+\frac{\partial u}{\partial t}-\nu\Delta u+(u\cdot\nabla)u+\nabla p=0,
+\qquad \nabla\cdot u=0,
+$$
 
-**Boundary conditions:**
+using a residual-based Variational Multiscale formulation with SUPG, PSPG, and grad-div stabilization. State the finite-element spaces and stabilization parameters used.
 
-Impose a uniform inflow $u = (U, 0)$ at $x = -30 D$. Impose traction-free outflow with reference pressure $p = 0$ at $x = +30 D$.
+**Boundary and initial conditions:**
 
-Impose no slip and no penetration on the top and bottom boundaries at $y = \pm 30 D$, and on the cylinder surface. Use the initial condition $u = (0,0)$ and $p = 0$, with an optional small perturbation to trigger vortex shedding.
+At the inlet $x=0$, prescribe
+
+$$
+u(0,y,t)=\left(\frac{4U(t)y(0.41-y)}{0.41^2},0\right),
+\qquad U(t)=1.5\sin\left(\frac{\pi t}{8}\right).
+$$
+
+Impose $u=0$ on the upper and lower channel walls and on the cylinder. At the outlet $x=2.2$, impose
+
+$$
+\nu\frac{\partial u}{\partial n}-pn=0.
+$$
+
+Use the initial condition $u(x,0)=(0,0)$.
 
 **Parameters:**
 
-Set $U = 1.0$ m/s, kinematic viscosity $\nu = 2.56 \times 10^{-5}$ m$^2$/s, and density $\rho = 1.0$ kg/m$^3$, diameter $D = 1$ m.
+Set density $\rho=1$ and kinematic viscosity $\nu=0.001$, giving a maximum Reynolds number $\mathrm{Re}=100$ based on the mean inlet velocity and cylinder diameter. Simulate over $0\leq t\leq8$. Use Crank--Nicolson time integration with $\Delta t=1/1600$ and verify that the reported quantities are sufficiently mesh-converged.
+
+**Benchmark quantities:**
+
+With $\sigma=\nu\nabla u-pI$ and $\eta$ pointing outward from the cylinder into the fluid, compute
+
+$$
+\begin{pmatrix}F_D\\F_L\end{pmatrix}=\int_{\partial B_{0.05}}\sigma\eta\,ds,
+\qquad
+C_D=\frac{2F_D}{U_{\mathrm{mean}}^2D},
+\qquad
+C_L=\frac{2F_L}{U_{\mathrm{mean}}^2D},
+$$
+
+where $U_{\mathrm{mean}}=1$ and $D=0.1$. Also compute
+
+$$
+\Delta p(t)=p(0.15,0.2,t)-p(0.25,0.2,t).
+$$
+
+Report $\max C_D(t)$, the time at which it occurs, $\max C_L(t)$, the time at which it occurs, and $\Delta p(8)$. Compare them with
+
+$$
+C_{D,\max}=2.950921575,
+\qquad C_{L,\max}\approx0.47795,
+\qquad \Delta p(8)\approx0.1116.
+$$
 
 **Output:**
 
-Report the mean drag coefficient computed over $t \in [8.0 \text{ s}, 10.0 \text{ s}]$.
-
-Save the final velocity field ($u$) and pressure field ($p$) at $t=10.0$ s to `vms\_solution.xdmf`.
+Save the velocity and pressure at $t=8$ to `vms_solution.xdmf`. Save the time histories of $C_D$, $C_L$, and $\Delta p$ in a machine-readable text file.

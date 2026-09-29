@@ -126,7 +126,10 @@ problem = NonlinearVariationalProblem(F, w, bcs, J)
 solver = NonlinearVariationalSolver(problem)
 prm = solver.parameters
 prm["nonlinear_solver"] = "newton"
-prm["newton_solver"]["relative_tolerance"] = 1e-8
+# The former 1e-8 relative tolerance stopped after two Newton updates while
+# the coupled temperature field still undershot the 300 K boundary minimum.
+# A tighter tolerance converges the monolithic (u, p, T) system in four updates.
+prm["newton_solver"]["relative_tolerance"] = 1e-12
 prm["newton_solver"]["absolute_tolerance"] = 1e-10
 prm["newton_solver"]["maximum_iterations"] = 50
 prm["newton_solver"]["linear_solver"] = "mumps"

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="velocity">
+      <Grid Name="velocity_0" GridType="Uniform">
+        <Topology NumberOfElements="24576" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="24576 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:velocity/velocity_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="4913 3" Format="HDF">read_checkpoint.h5:velocity/velocity_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="tetrahedron" Name="velocity" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="737280 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:velocity/velocity_0/cell_dofs</DataItem>
+          <DataItem Dimensions="107811 1" NumberType="Float" Format="HDF">read_checkpoint.h5:velocity/velocity_0/vector</DataItem>
+          <DataItem Dimensions="24577 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:velocity/velocity_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="24576 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:velocity/velocity_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="pressure">
+      <Grid Name="pressure_0" GridType="Uniform">
+        <Topology NumberOfElements="24576" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="24576 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:pressure/pressure_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="4913 3" Format="HDF">read_checkpoint.h5:pressure/pressure_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="tetrahedron" Name="pressure" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="98304 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:pressure/pressure_0/cell_dofs</DataItem>
+          <DataItem Dimensions="4913 1" NumberType="Float" Format="HDF">read_checkpoint.h5:pressure/pressure_0/vector</DataItem>
+          <DataItem Dimensions="24577 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:pressure/pressure_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="24576 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:pressure/pressure_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

@@ -168,7 +168,6 @@ if not conv:
 
 # Final fields
 u_sol, p_sol = u_k, p_sol
-mu_eff = mu_k
 
 # -----------------------
 # Outputs
@@ -180,12 +179,10 @@ xdmf.parameters["flush_output"] = True
 xdmf.parameters["functions_share_mesh"] = True
 u_sol.rename("u", "velocity")
 p_sol.rename("p", "pressure")
-mu_eff.rename("mu_eff", "effective_viscosity")
 xdmf.write(u_sol, 0.0)
 xdmf.write(p_sol, 0.0)
-xdmf.write(mu_eff, 0.0)
 xdmf.close()
-print("Saved (u, p, mu_eff) to q12_solution.xdmf")
+print("Saved (u, p) to q12_solution.xdmf")
 
 # 2) Speed colour map |u|
 try:
@@ -263,20 +260,17 @@ mesh_file.close()
 
 u_sol.rename("u", "velocity field")
 p_sol.rename("p", "pressure field")
-mu_eff.rename("mu_eff", "effective viscosity field")
 
 solution_file = XDMFFile(mesh.mpi_comm(), "solution.xdmf")
 solution_file.parameters["flush_output"] = True
 solution_file.parameters["functions_share_mesh"] = True
 solution_file.write(u_sol, 0.0)
 solution_file.write(p_sol, 0.0)
-solution_file.write(mu_eff, 0.0)
 solution_file.close()
 
 checkpoint_file = XDMFFile(mesh.mpi_comm(), "read_checkpoint.xdmf")
 checkpoint_file.write_checkpoint(u_sol, "u", 0.0, XDMFFile.Encoding.HDF5, False)
 checkpoint_file.write_checkpoint(p_sol, "p", 0.0, XDMFFile.Encoding.HDF5, True)
-checkpoint_file.write_checkpoint(mu_eff, "mu_eff", 0.0, XDMFFile.Encoding.HDF5, True)
 checkpoint_file.close()
 
 read_checkpoint_metadata = {
@@ -294,12 +288,6 @@ read_checkpoint_metadata = {
             "checkpoint_name": "p",
             "meaning": "pressure field",
             "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'p', -1)",
-        },
-        {
-            "symbol": "mu_eff",
-            "checkpoint_name": "mu_eff",
-            "meaning": "effective viscosity field",
-            "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'mu_eff', -1)",
         },
     ],
 }

@@ -1,0 +1,20 @@
+{
+  "fields": [
+    {
+      "name": "w",
+      "family": "CG",
+      "degree": 1,
+      "value_shape": [],
+      "time": 0.0
+    },
+    {
+      "name": "theta",
+      "family": "CG",
+      "degree": 1,
+      "value_shape": [
+        2
+      ],
+      "time": 0.0
+    }
+  ]
+}

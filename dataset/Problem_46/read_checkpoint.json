@@ -1,0 +1,80 @@
+{
+  "fields": [
+    {
+      "name": "u_1",
+      "family": "CG",
+      "degree": 1,
+      "value_shape": [
+        3
+      ],
+      "mode": 1,
+      "frequency": 2.130924932148767
+    },
+    {
+      "name": "u_2",
+      "family": "CG",
+      "degree": 1,
+      "value_shape": [
+        3
+      ],
+      "mode": 2,
+      "frequency": 4.094932838620987
+    },
+    {
+      "name": "u_3",
+      "family": "CG",
+      "degree": 1,
+      "value_shape": [
+        3
+      ],
+      "mode": 3,
+      "frequency": 13.321020841931022
+    },
+    {
+      "name": "u_4",
+      "family": "CG",
+      "degree": 1,
+      "value_shape": [
+        3
+      ],
+      "mode": 4,
+      "frequency": 25.414395326980564
+    },
+    {
+      "name": "u_5",
+      "family": "CG",
+      "degree": 1,
+      "value_shape": [
+        3
+      ],
+      "mode": 5,
+      "frequency": 37.151369184694744
+    },
+    {
+      "name": "u_6",
+      "family": "CG",
+      "degree": 1,
+      "value_shape": [
+        3
+      ],
+      "mode": 6,
+      "frequency": 69.9763093501648
+    }
+  ],
+  "frequencies_fe": [
+    2.130924932148767,
+    4.094932838620987,
+    13.321020841931022,
+    25.414395326980564,
+    37.151369184694744,
+    69.9763093501648
+  ],
+  "frequencies_beam": [
+    2.0192508481961915,
+    4.038501696392383,
+    12.654429057842282,
+    25.308858115684433,
+    35.432767784607805,
+    70.86553556921561
+  ]
+}

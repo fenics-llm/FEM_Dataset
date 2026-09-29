@@ -1,7 +1,10 @@
 # FEniCS PDE Dataset
 
 This repository contains PDE problem statements and associated FEniCS solution
-data.
+data. A subset of the problems was sourced or adapted from existing open FEM
+resources, including [COMET-FEniCS](https://comet-fenics.readthedocs.io/en/latest/)
+and [Example codes for coupled theories in solid
+mechanics](https://github.com/SolidMechanicsCoupledTheories/example_codes).
 
 ## Dataset structure
 

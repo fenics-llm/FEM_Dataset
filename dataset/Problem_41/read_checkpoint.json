@@ -1,0 +1,83 @@
+{
+  "format": "FEniCS XDMFFile.write_checkpoint",
+  "period": 0.015707963267948967,
+  "times": [
+    1.2409290981679684,
+    1.2448560889849556,
+    1.2487830798019428,
+    1.25271007061893,
+    1.2566370614359172
+  ],
+  "fields": [
+    {
+      "symbol": "u_output",
+      "checkpoint_name": "u_t79P",
+      "time": 1.2409290981679684,
+      "meaning": "velocity field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_t79P', -1)"
+    },
+    {
+      "symbol": "p_output",
+      "checkpoint_name": "p_t79P",
+      "time": 1.2409290981679684,
+      "meaning": "mean-zero pressure field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'p_t79P', -1)"
+    },
+    {
+      "symbol": "u_output",
+      "checkpoint_name": "u_t79P_plus_1over4",
+      "time": 1.2448560889849556,
+      "meaning": "velocity field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_t79P_plus_1over4', -1)"
+    },
+    {
+      "symbol": "p_output",
+      "checkpoint_name": "p_t79P_plus_1over4",
+      "time": 1.2448560889849556,
+      "meaning": "mean-zero pressure field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'p_t79P_plus_1over4', -1)"
+    },
+    {
+      "symbol": "u_output",
+      "checkpoint_name": "u_t79P_plus_1over2",
+      "time": 1.2487830798019428,
+      "meaning": "velocity field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_t79P_plus_1over2', -1)"
+    },
+    {
+      "symbol": "p_output",
+      "checkpoint_name": "p_t79P_plus_1over2",
+      "time": 1.2487830798019428,
+      "meaning": "mean-zero pressure field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'p_t79P_plus_1over2', -1)"
+    },
+    {
+      "symbol": "u_output",
+      "checkpoint_name": "u_t79P_plus_3over4",
+      "time": 1.25271007061893,
+      "meaning": "velocity field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_t79P_plus_3over4', -1)"
+    },
+    {
+      "symbol": "p_output",
+      "checkpoint_name": "p_t79P_plus_3over4",
+      "time": 1.25271007061893,
+      "meaning": "mean-zero pressure field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'p_t79P_plus_3over4', -1)"
+    },
+    {
+      "symbol": "u_output",
+      "checkpoint_name": "u_t80P",
+      "time": 1.2566370614359172,
+      "meaning": "velocity field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'u_t80P', -1)"
+    },
+    {
+      "symbol": "p_output",
+      "checkpoint_name": "p_t80P",
+      "time": 1.2566370614359172,
+      "meaning": "mean-zero pressure field",
+      "read_example": "XDMFFile(mesh.mpi_comm(), 'read_checkpoint.xdmf').read_checkpoint(function, 'p_t80P', -1)"
+    }
+  ]
+}

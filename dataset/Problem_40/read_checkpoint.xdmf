@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_t4pi">
+      <Grid Name="u_t4pi_0" GridType="Uniform">
+        <Topology NumberOfElements="32768" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="32768 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t4pi/u_t4pi_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="16577 2" Format="HDF">read_checkpoint.h5:u_t4pi/u_t4pi_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="12.566371" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u_t4pi" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="393216 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t4pi/u_t4pi_0/cell_dofs</DataItem>
+          <DataItem Dimensions="131842 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_t4pi/u_t4pi_0/vector</DataItem>
+          <DataItem Dimensions="32769 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t4pi/u_t4pi_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="32768 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t4pi/u_t4pi_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p_t4pi">
+      <Grid Name="p_t4pi_0" GridType="Uniform">
+        <Topology NumberOfElements="32768" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="32768 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t4pi/p_t4pi_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="16577 2" Format="HDF">read_checkpoint.h5:p_t4pi/p_t4pi_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="12.566371" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p_t4pi" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="98304 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t4pi/p_t4pi_0/cell_dofs</DataItem>
+          <DataItem Dimensions="16577 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p_t4pi/p_t4pi_0/vector</DataItem>
+          <DataItem Dimensions="32769 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t4pi/p_t4pi_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="32768 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t4pi/p_t4pi_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_t9pi_over_2">
+      <Grid Name="u_t9pi_over_2_0" GridType="Uniform">
+        <Topology NumberOfElements="32768" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="32768 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t9pi_over_2/u_t9pi_over_2_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="16577 2" Format="HDF">read_checkpoint.h5:u_t9pi_over_2/u_t9pi_over_2_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="14.137167" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u_t9pi_over_2" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="393216 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t9pi_over_2/u_t9pi_over_2_0/cell_dofs</DataItem>
+          <DataItem Dimensions="131842 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_t9pi_over_2/u_t9pi_over_2_0/vector</DataItem>
+          <DataItem Dimensions="32769 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t9pi_over_2/u_t9pi_over_2_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="32768 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t9pi_over_2/u_t9pi_over_2_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p_t9pi_over_2">
+      <Grid Name="p_t9pi_over_2_0" GridType="Uniform">
+        <Topology NumberOfElements="32768" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="32768 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t9pi_over_2/p_t9pi_over_2_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="16577 2" Format="HDF">read_checkpoint.h5:p_t9pi_over_2/p_t9pi_over_2_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="14.137167" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p_t9pi_over_2" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="98304 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t9pi_over_2/p_t9pi_over_2_0/cell_dofs</DataItem>
+          <DataItem Dimensions="16577 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p_t9pi_over_2/p_t9pi_over_2_0/vector</DataItem>
+          <DataItem Dimensions="32769 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t9pi_over_2/p_t9pi_over_2_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="32768 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t9pi_over_2/p_t9pi_over_2_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_t5pi">
+      <Grid Name="u_t5pi_0" GridType="Uniform">
+        <Topology NumberOfElements="32768" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="32768 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t5pi/u_t5pi_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="16577 2" Format="HDF">read_checkpoint.h5:u_t5pi/u_t5pi_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="15.707963" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u_t5pi" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="393216 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t5pi/u_t5pi_0/cell_dofs</DataItem>
+          <DataItem Dimensions="131842 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_t5pi/u_t5pi_0/vector</DataItem>
+          <DataItem Dimensions="32769 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t5pi/u_t5pi_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="32768 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t5pi/u_t5pi_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p_t5pi">
+      <Grid Name="p_t5pi_0" GridType="Uniform">
+        <Topology NumberOfElements="32768" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="32768 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t5pi/p_t5pi_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="16577 2" Format="HDF">read_checkpoint.h5:p_t5pi/p_t5pi_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="15.707963" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p_t5pi" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="98304 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t5pi/p_t5pi_0/cell_dofs</DataItem>
+          <DataItem Dimensions="16577 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p_t5pi/p_t5pi_0/vector</DataItem>
+          <DataItem Dimensions="32769 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t5pi/p_t5pi_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="32768 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t5pi/p_t5pi_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_t11pi_over_2">
+      <Grid Name="u_t11pi_over_2_0" GridType="Uniform">
+        <Topology NumberOfElements="32768" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="32768 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t11pi_over_2/u_t11pi_over_2_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="16577 2" Format="HDF">read_checkpoint.h5:u_t11pi_over_2/u_t11pi_over_2_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="17.278760" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u_t11pi_over_2" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="393216 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t11pi_over_2/u_t11pi_over_2_0/cell_dofs</DataItem>
+          <DataItem Dimensions="131842 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_t11pi_over_2/u_t11pi_over_2_0/vector</DataItem>
+          <DataItem Dimensions="32769 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t11pi_over_2/u_t11pi_over_2_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="32768 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t11pi_over_2/u_t11pi_over_2_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p_t11pi_over_2">
+      <Grid Name="p_t11pi_over_2_0" GridType="Uniform">
+        <Topology NumberOfElements="32768" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="32768 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t11pi_over_2/p_t11pi_over_2_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="16577 2" Format="HDF">read_checkpoint.h5:p_t11pi_over_2/p_t11pi_over_2_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="17.278760" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p_t11pi_over_2" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="98304 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t11pi_over_2/p_t11pi_over_2_0/cell_dofs</DataItem>
+          <DataItem Dimensions="16577 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p_t11pi_over_2/p_t11pi_over_2_0/vector</DataItem>
+          <DataItem Dimensions="32769 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t11pi_over_2/p_t11pi_over_2_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="32768 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t11pi_over_2/p_t11pi_over_2_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_t6pi">
+      <Grid Name="u_t6pi_0" GridType="Uniform">
+        <Topology NumberOfElements="32768" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="32768 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t6pi/u_t6pi_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="16577 2" Format="HDF">read_checkpoint.h5:u_t6pi/u_t6pi_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="18.849556" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="2" ElementCell="triangle" Name="u_t6pi" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="393216 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t6pi/u_t6pi_0/cell_dofs</DataItem>
+          <DataItem Dimensions="131842 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_t6pi/u_t6pi_0/vector</DataItem>
+          <DataItem Dimensions="32769 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t6pi/u_t6pi_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="32768 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_t6pi/u_t6pi_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="p_t6pi">
+      <Grid Name="p_t6pi_0" GridType="Uniform">
+        <Topology NumberOfElements="32768" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="32768 3" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t6pi/p_t6pi_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="16577 2" Format="HDF">read_checkpoint.h5:p_t6pi/p_t6pi_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="18.849556" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="triangle" Name="p_t6pi" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="98304 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t6pi/p_t6pi_0/cell_dofs</DataItem>
+          <DataItem Dimensions="16577 1" NumberType="Float" Format="HDF">read_checkpoint.h5:p_t6pi/p_t6pi_0/vector</DataItem>
+          <DataItem Dimensions="32769 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t6pi/p_t6pi_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="32768 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:p_t6pi/p_t6pi_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

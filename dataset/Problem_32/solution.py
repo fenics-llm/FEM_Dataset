@@ -10,6 +10,26 @@ from dolfin import *
 from mshr import Circle, generate_mesh
 
 
+class RadialVector(UserExpression):
+    """Evaluate scale*x/|x|, with the vector set to zero at the disk centre."""
+
+    def __init__(self, scale, **kwargs):
+        super().__init__(**kwargs)
+        self.scale = scale
+
+    def eval(self, values, x):
+        radius = math.hypot(x[0], x[1])
+        if radius > 1.0e-14:
+            values[0] = self.scale * x[0] / radius
+            values[1] = self.scale * x[1] / radius
+        else:
+            values[0] = 0.0
+            values[1] = 0.0
+
+    def value_shape(self):
+        return (2,)
+
+
 def main():
     # -------------------------------------------------------------------------
     # Parameters.
@@ -46,26 +66,8 @@ def main():
 
     # The prescribed radial mesh velocity.  The point x = 0 is assigned zero
     # velocity, exactly as in the benchmark statement.
-    mesh_velocity = Expression(
-        (
-            "sqrt(x[0]*x[0] + x[1]*x[1]) > 1.0e-14 ? "
-            "s*x[0]/sqrt(x[0]*x[0] + x[1]*x[1]) : 0.0",
-            "sqrt(x[0]*x[0] + x[1]*x[1]) > 1.0e-14 ? "
-            "s*x[1]/sqrt(x[0]*x[0] + x[1]*x[1]) : 0.0",
-        ),
-        s=expansion_speed,
-        degree=1,
-    )
-    displacement = Expression(
-        (
-            "sqrt(x[0]*x[0] + x[1]*x[1]) > 1.0e-14 ? "
-            "sdt*x[0]/sqrt(x[0]*x[0] + x[1]*x[1]) : 0.0",
-            "sqrt(x[0]*x[0] + x[1]*x[1]) > 1.0e-14 ? "
-            "sdt*x[1]/sqrt(x[0]*x[0] + x[1]*x[1]) : 0.0",
-        ),
-        sdt=expansion_speed * dt_value,
-        degree=1,
-    )
+    mesh_velocity = RadialVector(scale=expansion_speed, degree=1)
+    displacement = RadialVector(scale=expansion_speed * dt_value, degree=1)
 
     # WF-32a from weak_form.md.  Integration by parts of diffusion plus
     # (-D grad(c) - w c).n = 0 produces the final, essential w*c boundary term.
@@ -88,6 +90,13 @@ def main():
     mass_initial = assemble(c_old * dx)
     mass_rows.append((0, 0.0, mass_initial, 1.0, 0.0))
     print("step %4d, t = %.2f s, mass = %.16e" % (0, 0.0, mass_initial))
+
+    # The canonical agent-visible mesh is the initial ALE mesh.  Write it after
+    # the first form assembly (required by this legacy DOLFIN/MSHR environment)
+    # but before any ALE motion, then keep it immutable.
+    mesh_file = XDMFFile(comm, "mesh.xdmf")
+    mesh_file.write(mesh)
+    mesh_file.close()
 
     # -------------------------------------------------------------------------
     # Time stepping.  ALE.move applies the prescribed per-step radial
@@ -116,12 +125,9 @@ def main():
         c_old.assign(c_new)
 
     # -------------------------------------------------------------------------
-    # Standard dataset outputs: final mesh, primitive solution, and checkpoint.
+    # Standard dataset outputs.  The final moved geometry is embedded in both
+    # solution files; mesh.xdmf remains the initial radius-0.05 input mesh.
     # -------------------------------------------------------------------------
-    mesh_file = XDMFFile(comm, "mesh.xdmf")
-    mesh_file.write(mesh)
-    mesh_file.close()
-
     c_old.rename("c", "chemical concentration")
     solution_file = XDMFFile(comm, "solution.xdmf")
     solution_file.parameters["flush_output"] = True
@@ -137,7 +143,7 @@ def main():
 
     if MPI.rank(comm) == 0:
         with open("total_mass.csv", "w", newline="", encoding="utf-8") as output_file:
-            writer = csv.writer(output_file)
+            writer = csv.writer(output_file, lineterminator="\n")
             writer.writerow(
                 [
                     "step",
@@ -169,6 +175,10 @@ def main():
         checkpoint_metadata = {
             "format": "FEniCS XDMFFile.write_checkpoint",
             "checkpoint_policy": "Only the final concentration at t = 10.0 s is stored.",
+            "mesh_policy": (
+                "mesh.xdmf stores the initial radius-0.05 ALE mesh; the final "
+                "radius-0.06 geometry is embedded in the solution and checkpoint files."
+            ),
             "time": final_time,
             "fields": [
                 {

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u">
+      <Grid Name="u_0" GridType="Uniform">
+        <Topology NumberOfElements="13500" TopologyType="Hexahedron" NodesPerElement="8">
+          <DataItem Dimensions="13500 8" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="15376 3" Format="HDF">read_checkpoint.h5:u/u_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="Q" ElementDegree="1" ElementCell="hexahedron" Name="u" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="324000 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/cell_dofs</DataItem>
+          <DataItem Dimensions="46128 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u/u_0/vector</DataItem>
+          <DataItem Dimensions="13501 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="13500 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u/u_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

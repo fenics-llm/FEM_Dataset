@@ -1,0 +1,14 @@
+{
+  "format": "FEniCS XDMFFile.write_checkpoint",
+  "time": 0.0,
+  "fields": [
+    {
+      "symbol": "u_h",
+      "checkpoint_name": "u",
+      "meaning": "scalar manufactured Poisson solution",
+      "element_family": "Lagrange",
+      "element_degree": 1,
+      "value_shape": []
+    }
+  ]
+}

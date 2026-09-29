@@ -1,0 +1,11 @@
+{
+  "fields": [
+    {
+      "name": "u",
+      "source_symbol": "u",
+      "meaning": "displacement",
+      "time": 0.0
+    }
+  ],
+  "read_example": "V = VectorFunctionSpace(mesh, 'Lagrange', 2); u = Function(V); file.read_checkpoint(u, 'u', -1)"
+}

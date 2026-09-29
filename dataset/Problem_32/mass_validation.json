@@ -3,8 +3,8 @@
   "expected_total_mass": "M(0) * exp(-kappa * t)",
   "kappa_per_s": 0.0001,
   "initial_mass": 0.007851885281603457,
-  "final_mass": 0.00784443417775742,
-  "maximum_absolute_relative_mass_error": 5.054286798812702e-05,
+  "final_mass": 0.007844434177757419,
+  "maximum_absolute_relative_mass_error": 5.054286798790609e-05,
   "num_time_steps": 1000,
   "dt_s": 0.01,
   "final_time_s": 10.0

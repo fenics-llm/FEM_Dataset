@@ -28,7 +28,7 @@ Problem_26,fluid,Medium,Solution exists,"Let $Omega = [0, 1] times [0, 1]$ m be 
 Problem_27,fluid,Medium,Solution exists,"Steady, incompressible, non-Newtonian flow."
 Problem_28,fluid,Hard,Solution exists,"Steady incompressible Navier-Stokes for velocity $u = (ux, uy)$ and pressure $p$ in $Omega$, coupled to a steady advection-diffusion equation for temperature $T$: Momentum: $rho (u cdot nabla) u - nabla cdot [2 mu(T) varepsilon(u)] + nabla p = 0$, where $varepsilon(u) = (nabla u + (nabla u)^T)/2$."
 Problem_29,fluid,Medium,Solution exists,"Steady advection-diffusion for a scalar concentration $c$ in $Omega$ with a given velocity field $u(x,y) = (ux(y), 0)$, ; $ux(y) = Utextmax cdot [4 y (H - y) / H^2]."
-Problem_30,fluid,Hard,Solution missing,"Solve the incompressible, unsteady Navier-Stokes equations in $Omega$ using a Variational Multiscale (residual-based VMS) formulation with streamline-upwind, pressure-stabilizing Petrov-Galerkin, and grad-div stabilizations."
+Problem_30,fluid,Hard,Solution missing,"Solve the DFG 2D-3 unsteady cylinder-flow benchmark at Reynolds number 100 using a residual-based VMS formulation with SUPG, PSPG, and grad-div stabilization."
 Problem_31,fluid,Medium,Solution exists,"Solve the unsteady incompressible Navier-Stokes equations for velocity $U = (u, v)$ and pressure $p$ in the domain."
 Problem_32,multiphysics,Hard,Solution exists,"Solve the diffusion-reaction equation for concentration $c$ on a moving domain using an Arbitrary Lagrangian-Eulerian (ALE) description, with constant diffusivity $D$ and first-ord..."
 Problem_33,multiphysics,Hard,Solution exists,"Solve in $Omega$ the Allen-Cahn curvature-flow equation for the phase field $phi$, given by $partialphi/partial t = -M ( (1/varepsilon) W'(phi) - varepsilon nabla^2phi )$, where the double-well potential is $W(phi) = 0.25 (phi^2 - 1)^2$."
@@ -38,3 +38,30 @@ Problem_36,multiphysics,Hard,Solution missing,The fluid is incompressible and is
 Problem_37,multiphysics,Hard,Solution missing,The fluid is incompressible and is solved in the moving domain using the Arbitrary Lagrangian Eulerian form of the Navier-Stokes equations.
 Problem_38,multiphysics,Hard,Solution exists,"Solve a coupled, steady, incompressible flow problem for velocity $u = (ux, uy)$ and pressure $p$."
 Problem_39,multiphysics,Hard,Solution exists,This is a coupled problem solving for velocity and pressure in each subdomain.
+Problem_40,fluid,Medium,Solution exists,"Solve low-Womersley-number oscillatory planar-channel flow using the unsteady incompressible Stokes equations with periodic streamwise boundaries, no-slip walls, harmonic body forcing, and mean-zero pressure."
+Problem_41,fluid,Hard,Solution exists,Solve high-frequency oscillatory planar-channel Stokes flow from rest on a wall-normal-refined mesh through 80 forcing periods.
+Problem_42,solid,Medium,Solution exists,Plane-stress cantilever elasticity driven by uniform self-weight.
+Problem_43,solid,Medium,Solution exists,Axisymmetric linear elasticity of an externally pressurized hollow sphere represented by a meridional section.
+Problem_44,multiphysics,Hard,Solution exists,Sequential steady heat conduction and linear thermoelasticity in a rectangular beam.
+Problem_45,multiphysics,Hard,Solution exists,Fully coupled transient linear thermoelasticity of a heated perforated plate.
+Problem_46,solid,Medium,Solution exists,Three-dimensional cantilever modal eigenanalysis.
+Problem_47,solid,Medium,Solution exists,Generalized-alpha time integration of a three-dimensional elastic cantilever.
+Problem_48,solid,Hard,Solution exists,Temperature-dependent beam cross-section stiffness and scalar shear-warping analysis.
+Problem_49,solid,Hard,Solution exists,Prestressed three-dimensional solid buckling eigenanalysis.
+Problem_50,solid,Hard,Solution exists,Hertzian contact with a rigid spherical indenter using a nonlinear penalty law.
+Problem_51,solid,Hard,Solution exists,Clamped Reissner-Mindlin plate using quadrilateral elements and selective reduced integration.
+Problem_52,multiphysics,Easy,Solution exists,Manufactured Poisson equation on the unit square solved with P1 elements and CG/ILU.
+Problem_53,multiphysics,Easy,Solution exists,Layered diffusion with a discontinuous piecewise-constant coefficient.
+Problem_54,multiphysics,Hard,Solution exists,Goal-oriented adaptive Poisson problem for a domain-average functional.
+Problem_55,multiphysics,Medium,Solution exists,Biharmonic equation solved with a symmetric C0 interior-penalty method.
+Problem_56,multiphysics,Medium,Solution exists,Mean-constrained Neumann Poisson problem with an explicit compatibility multiplier.
+Problem_57,multiphysics,Easy,Solution exists,Poisson equation with vertical Dirichlet and horizontal Neumann conditions.
+Problem_58,fluid,Medium,Solution exists,Three-dimensional force-free Stokes flow with Taylor-Hood elements and mixed velocity-pressure boundary data.
+Problem_59,multiphysics,Easy,Solution exists,One-dimensional diffusion-reaction equation with Dirichlet and Neumann boundary conditions.
+Problem_60,multiphysics,Easy,Solution exists,Backward-Euler heat conduction on a square with a circular hole and two boundary temperatures.
+Problem_61,multiphysics,Easy,Solution exists,Steady conduction on a long rectangle with a piecewise-constant boundary temperature.
+Problem_62,multiphysics,Easy,Solution exists,Poisson heat equation with a concentrated Dirac source at the origin.
+Problem_63,multiphysics,Easy,Solution exists,Steady conduction with a strongly varying diffusivity and an insulated boundary.
+Problem_64,solid,Easy,Solution exists,Tensioned circular membrane under an off-center Gaussian pressure.
+Problem_65,multiphysics,Easy,Solution exists,Poisson equation with a degree-40 manufactured solution requiring explicit quadrature control.
+Problem_66,multiphysics,Easy,Solution exists,Piecewise manufactured Poisson solution with limited regularity across an interior line.

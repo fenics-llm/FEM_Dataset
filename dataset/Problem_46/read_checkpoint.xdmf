@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0">
+  <Domain>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_1">
+      <Grid Name="u_1_0" GridType="Uniform">
+        <Topology NumberOfElements="79200" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="79200 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_1/u_1_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="16884 3" Format="HDF">read_checkpoint.h5:u_1/u_1_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="tetrahedron" Name="u_1" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="950400 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_1/u_1_0/cell_dofs</DataItem>
+          <DataItem Dimensions="50652 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_1/u_1_0/vector</DataItem>
+          <DataItem Dimensions="79201 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_1/u_1_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="79200 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_1/u_1_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_2">
+      <Grid Name="u_2_0" GridType="Uniform">
+        <Topology NumberOfElements="79200" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="79200 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_2/u_2_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="16884 3" Format="HDF">read_checkpoint.h5:u_2/u_2_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="tetrahedron" Name="u_2" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="950400 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_2/u_2_0/cell_dofs</DataItem>
+          <DataItem Dimensions="50652 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_2/u_2_0/vector</DataItem>
+          <DataItem Dimensions="79201 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_2/u_2_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="79200 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_2/u_2_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_3">
+      <Grid Name="u_3_0" GridType="Uniform">
+        <Topology NumberOfElements="79200" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="79200 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_3/u_3_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="16884 3" Format="HDF">read_checkpoint.h5:u_3/u_3_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="tetrahedron" Name="u_3" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="950400 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_3/u_3_0/cell_dofs</DataItem>
+          <DataItem Dimensions="50652 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_3/u_3_0/vector</DataItem>
+          <DataItem Dimensions="79201 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_3/u_3_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="79200 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_3/u_3_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_4">
+      <Grid Name="u_4_0" GridType="Uniform">
+        <Topology NumberOfElements="79200" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="79200 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_4/u_4_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="16884 3" Format="HDF">read_checkpoint.h5:u_4/u_4_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="tetrahedron" Name="u_4" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="950400 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_4/u_4_0/cell_dofs</DataItem>
+          <DataItem Dimensions="50652 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_4/u_4_0/vector</DataItem>
+          <DataItem Dimensions="79201 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_4/u_4_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="79200 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_4/u_4_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_5">
+      <Grid Name="u_5_0" GridType="Uniform">
+        <Topology NumberOfElements="79200" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="79200 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_5/u_5_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="16884 3" Format="HDF">read_checkpoint.h5:u_5/u_5_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="tetrahedron" Name="u_5" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="950400 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_5/u_5_0/cell_dofs</DataItem>
+          <DataItem Dimensions="50652 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_5/u_5_0/vector</DataItem>
+          <DataItem Dimensions="79201 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_5/u_5_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="79200 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_5/u_5_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="u_6">
+      <Grid Name="u_6_0" GridType="Uniform">
+        <Topology NumberOfElements="79200" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="79200 4" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_6/u_6_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="16884 3" Format="HDF">read_checkpoint.h5:u_6/u_6_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="CG" ElementDegree="1" ElementCell="tetrahedron" Name="u_6" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="950400 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_6/u_6_0/cell_dofs</DataItem>
+          <DataItem Dimensions="50652 1" NumberType="Float" Format="HDF">read_checkpoint.h5:u_6/u_6_0/vector</DataItem>
+          <DataItem Dimensions="79201 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_6/u_6_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="79200 1" NumberType="UInt" Format="HDF">read_checkpoint.h5:u_6/u_6_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="3.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid Name="TimeSeries" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="mesh" GridType="Uniform">
+        <Topology NumberOfElements="79200" TopologyType="Tetrahedron" NodesPerElement="4">
+          <DataItem Dimensions="79200 4" NumberType="UInt" Format="HDF">solution.h5:/Mesh/0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XYZ">
+          <DataItem Dimensions="16884 3" Format="HDF">solution.h5:/Mesh/0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0" />
+        <Attribute Name="u_1" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="16884 3" Format="HDF">solution.h5:/VisualisationVector/0</DataItem>
+        </Attribute>
+        <Attribute Name="u_2" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="16884 3" Format="HDF">solution.h5:/VisualisationVector/1</DataItem>
+        </Attribute>
+        <Attribute Name="u_3" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="16884 3" Format="HDF">solution.h5:/VisualisationVector/2</DataItem>
+        </Attribute>
+        <Attribute Name="u_4" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="16884 3" Format="HDF">solution.h5:/VisualisationVector/3</DataItem>
+        </Attribute>
+        <Attribute Name="u_5" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="16884 3" Format="HDF">solution.h5:/VisualisationVector/4</DataItem>
+        </Attribute>
+        <Attribute Name="u_6" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="16884 3" Format="HDF">solution.h5:/VisualisationVector/5</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

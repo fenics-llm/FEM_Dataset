@@ -1,0 +1,24 @@
+{
+  "format": "FEniCS XDMFFile.write_checkpoint",
+  "time": 0.0,
+  "fields": [
+    {
+      "symbol": "u_h",
+      "checkpoint_name": "velocity",
+      "meaning": "three-dimensional Stokes velocity",
+      "element_family": "Lagrange",
+      "element_degree": 2,
+      "value_shape": [
+        3
+      ]
+    },
+    {
+      "symbol": "p_h",
+      "checkpoint_name": "pressure",
+      "meaning": "Stokes pressure",
+      "element_family": "Lagrange",
+      "element_degree": 1,
+      "value_shape": []
+    }
+  ]
+}

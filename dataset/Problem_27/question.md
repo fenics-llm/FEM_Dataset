@@ -28,9 +28,15 @@ The stress tensor $\tau$ is defined by a power-law model: $\tau = 2 \mu_{\text{e
 
 **Material (Power-Law Fluid):**
 
-The effective viscosity $\mu_{\text{eff}}$ is a function of the shear rate $|D| = (2 D:D)^{1/2} + 10^{-8}$.
+The regularized shear rate and effective viscosity are
 
-$\mu_{\text{eff}}(|D|) = \mu_0 [|D|^{n-1}]$.
+$$
+|D|_\varepsilon=\sqrt{2D:D+\varepsilon^2},
+\qquad
+\mu_{\mathrm{eff}}=\mu_0|D|_\varepsilon^{n-1},
+$$
+
+with $\varepsilon=10^{-6}\ \mathrm{s}^{-1}$.
 
 Density $\rho = 1.0$ kg m$^{-3}$.
 
@@ -48,10 +54,4 @@ Outlet ($x = 2.0$): traction-free, $(-pI + \tau) n = 0$.
 
 **Output:**
 
-Save a color map of the velocity magnitude $|u|$ as `q12\_speed.png`.
-
-Extract the streamwise velocity profile $u_x(y)$ at mid-channel ($x = 1.0$) and save it as `q12\_profile.csv`.
-
-Also, save the velocity field ($u$), pressure field ($p$), and effective viscosity ($\mu_{\text{eff}}$) to `q12\_solution.xdmf`.
-
-Report the maximum velocity $u_x(y)$ at $x = L/2$.
+Save $u$ and $p$ to `solution.xdmf` and `solution.h5`.

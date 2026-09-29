@@ -21,3 +21,8 @@ The solver advances the prescribed mesh motion at every time step with
 `ALE.move(mesh, displacement)`, where `displacement = s*dt*x/|x|` away from
 the centre and is zero at the centre.  With the resolution parameter 50, the
 initial mean element size is approximately `1e-3 m` across the disk diameter.
+
+`mesh.xdmf` and `mesh.h5` store this initial radius-$0.05$ mesh. The solver
+moves only its in-memory mesh; the final radius-$0.06$ geometry is embedded in
+`solution.xdmf` and `read_checkpoint.xdmf` and does not overwrite the supplied
+initial mesh.

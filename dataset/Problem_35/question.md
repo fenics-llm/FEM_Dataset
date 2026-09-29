@@ -36,7 +36,7 @@ $w(y) = -K - (g y)/(2\nu) + (K/2 - \alpha g/(4\nu^2)) y^2$ and $K = k \rho g / \
 
 **Parameters:**
 
-Take $g = 1, \rho = 1, \nu = 1, k = 1, K = 1, \alpha = 1$.
+Take $g = 1, \rho = 1, \nu = 1, k = 1, \mu = 1, K = 1, \alpha = 1$.
 
 Body force $b$:
 
@@ -44,6 +44,12 @@ $b_x(x,y) = [ (\nu K - (\alpha g)/(2\nu)) y - g/2 ] \cos(x)$
 
 $b_y(x,y) = [ ( (\nu K)/2 - (\alpha g)/(4\nu) ) y^2 - (g/2) y + ( (\alpha g)/(2\nu) - 2\nu K ) ] \sin(x)$
 
+**Numerical formulation:**
+
+Use the supplied mesh. Assemble and solve one coupled finite-element variational system for $(u_S,p_S,p_D)$, using $[P_2]^2$ for $u_S$ and $P_1$ for both pressures. Represent these fields on the full mesh with zero extension outside their corresponding subdomains, without constraining the interface trace, and impose $p_S(0,0.5)=0$. The volume equations must be integrated only over their corresponding subdomains, and the three interface conditions must enter the coupled weak form. Compute $u_D=-(k/\mu)\nabla p_D$ from the solved Darcy pressure in a vector $DG_0$ space, extended by zero outside $\Omega_D$.
+
+The manufactured expressions in this problem may be used only as boundary data and for validation. Directly interpolating or projecting them as the returned solution fields is not permitted.
+
 **Output:**
 
-Save the Stokes velocity and Darcy pressure in XDMF format.
+Save $u_S$, $p_S$, $p_D$, and $u_D$ in `solution.xdmf` and `solution.h5`.
